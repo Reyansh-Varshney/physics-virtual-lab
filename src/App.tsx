@@ -79,11 +79,6 @@ const App: React.FC = () => {
           </div>
         </div>
       </main>
-      <footer className="py-4 bg-gray-800/30 border-t border-gray-700">
-        <div className="container mx-auto text-center text-gray-500 text-sm">
-          Powered by XIVIX
-        </div>
-      </footer>
     </div>
   );
 };
