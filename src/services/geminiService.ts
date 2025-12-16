@@ -9,7 +9,7 @@ if (!API_KEY) {
 
 export const getTutorResponse = async (context: string, question: string): Promise<string> => {
   if (!API_KEY) {
-    return "Error: Gemini API key is not configured. Please set the VITE_API_KEY environment variable.";
+    return "I ran into a problem.";
   }
 
   try {
@@ -21,12 +21,9 @@ export const getTutorResponse = async (context: string, question: string): Promi
       contents: fullPrompt,
     });
 
-    return response.text || "No response generated from the AI.";
+    return response.text || "I ran into a problem.";
   } catch (error) {
     console.error("Error calling Gemini API:", error);
-    if (error instanceof Error) {
-        return `An error occurred while fetching the explanation: ${error.message}`;
-    }
-    return "An unknown error occurred while fetching the explanation.";
+    return "I ran into a problem.";
   }
 };

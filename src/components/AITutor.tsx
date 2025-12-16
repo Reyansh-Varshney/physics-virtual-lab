@@ -29,7 +29,7 @@ const AITutor: React.FC<AITutorProps> = ({ simulationContext }) => {
       const response = await getTutorResponse(simulationContext, question);
       setAnswer(response);
     } catch (error) {
-      setAnswer('Sorry, I encountered an error. Please try again.');
+      setAnswer('I ran into a problem.');
     } finally {
       setIsLoading(false);
     }
@@ -40,6 +40,7 @@ const AITutor: React.FC<AITutorProps> = ({ simulationContext }) => {
       <div className="flex items-center mb-4">
         <AITutorIcon className="w-8 h-8 text-cyan-400" />
         <h2 className="text-2xl font-bold ml-3 text-cyan-400">AI Physics Tutor</h2>
+        <span className="ml-2 px-2 py-1 text-xs font-semibold bg-yellow-500/20 text-yellow-400 rounded-full border border-yellow-500/30">Experimental</span>
       </div>
       <p className="text-sm text-gray-400 mb-4">
         Ask a question about the current simulation or any related physics concept.
