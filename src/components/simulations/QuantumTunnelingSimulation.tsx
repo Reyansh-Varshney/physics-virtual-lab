@@ -31,7 +31,6 @@ const QuantumTunnelingSimulation: React.FC = () => {
     const { width, height } = ctx.canvas;
     const groundLevel = height - 50;
     const barrierStartX = width / 2 - barrierWidth / 2;
-    const barrierEndX = width / 2 + barrierWidth / 2;
     
     ctx.clearRect(0, 0, width, height);
 
@@ -95,7 +94,6 @@ const QuantumTunnelingSimulation: React.FC = () => {
         const E = particleEnergy;
         const V0 = 1; // Normalized barrier height
         const a = barrierWidth / 10; // Scaled width
-        const k1_sq = E;
         const k2_sq = Math.abs(E - V0);
 
         let T;

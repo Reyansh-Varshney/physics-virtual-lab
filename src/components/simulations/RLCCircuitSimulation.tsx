@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 import Slider from '../Slider';
 
@@ -16,7 +16,7 @@ const RLCCircuitSimulation: React.FC = () => {
   const [inductance, setInductance] = useState(50); // L (mH)
   const [capacitance, setCapacitance] = useState(50); // C (uF)
   const [drivingFrequency, setDrivingFrequency] = useState(30); // f (Hz)
-  const [vMax, setVMax] = useState(10); // Volts
+  const [vMax] = useState(10); // Volts
 
   const { plotData, metrics } = useMemo(() => {
     const R = resistance;
